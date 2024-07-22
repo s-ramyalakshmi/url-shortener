@@ -1,5 +1,6 @@
 package com.urlshortener.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,8 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class UrlMapping {
-    private Long id;
+    @JsonIgnore
+    private Integer id;
     private String longURL;
     private String shortURL;
     private LocalDateTime createdAt;
